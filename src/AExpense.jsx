@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./AEx.css";
-import "./ETrac.css";
+
 
 export default function AExpense({ onCancel, onAddExpense, currentBalance }) {
     const [title, setTitle] = useState("");
@@ -28,9 +28,7 @@ export default function AExpense({ onCancel, onAddExpense, currentBalance }) {
         };
 
         onAddExpense(expense);
-        onCancel(); // close modal
-
-        // clear inputs (optional if modal closes)
+        onCancel(); 
         setTitle("");
         setPrice("");
         setCategory("");

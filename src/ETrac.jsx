@@ -112,7 +112,7 @@ const Expense = ({ expenses }) => {
 
     return (
         <div className="mob">
-            <h2 style={{ color: "black", padding: "5px",marginBottom:"0" }}>Category Breakdown</h2>
+            <h2 style={{ color: "black", padding: "5px",marginBottom:"0",textAlign:"center" }}>Category Breakdown</h2>
             <div className="category-bars">
                 {Object.keys(totals).map((category) => {
                     const width = overallTotal ? (totals[category] / overallTotal) * 100 : 0;
