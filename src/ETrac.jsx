@@ -26,16 +26,7 @@ const Transaction = ({ expenses, onDelete }) => {
 
 
             {expenses.length === 0 ? (
-                <div style={{
-                    backgroundColor: "white",
-                    padding: "15px",
-                    borderRadius: "10px",
-                    color: "black",
-                    fontSize: "20px",
-                    textAlign: "center",
-                    width: "800px",
-                    fontWeight: "bold"
-                }}>
+                <div className="no-transactions-message">
                     No transactions!
                 </div>
             ) : (
