@@ -1,6 +1,7 @@
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import "./pie.css"
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
@@ -29,6 +30,7 @@ const ExpensePie = ({ expenses }) => {
                 backgroundColor: ["magenta", "orange", "yellow"],
                 borderColor: "white",
                 borderWidth: 2,
+                
             },
         ],
     };
@@ -37,7 +39,7 @@ const ExpensePie = ({ expenses }) => {
         plugins: {
             legend: {
                 position: "bottom",
-                labels: { color: "white" },
+                labels: { color: "white"  },
             },
             datalabels: {
                 formatter: (value, ctx) => {
@@ -45,12 +47,17 @@ const ExpensePie = ({ expenses }) => {
                     if (total === 0) return "0%";
                     return Math.round((value / total) * 100) + "%";
                 },
-                color: "white",
+                color: "black",
             },
         },
     };
 
-    return <Pie data={data} options={options} />;
+    return (
+    <div className="pie">
+        <Pie data={data} options={options} />
+    </div>
+);
+
 };
 
 export default ExpensePie;

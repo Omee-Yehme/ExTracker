@@ -119,7 +119,7 @@ body {
 
 .category-bars {
     margin-top: 10px;
-    
+
     padding-inline: 20px;
 }
 
@@ -150,6 +150,20 @@ body {
     transition: width 0.4s ease;
 }
 
+.transaction-card {
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    height: 50px;
+    color: black;
+}
 
 
 
@@ -167,7 +181,7 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         height: 800px;
-        align-items: ;
+
 
     }
 
@@ -193,6 +207,7 @@ body {
     .mob {
         margin-right: 0px;
         height: 300px;
+        margin-bottom: 30px;
     }
 
     .tran {
@@ -207,7 +222,12 @@ body {
     .modal {
         min-width: 100px;
     }
-    .bar-wrapper{
+
+    .bar-wrapper {
         padding: 10px;
+    }
+
+    .transaction-card{
+        width: 350px;
     }
 }

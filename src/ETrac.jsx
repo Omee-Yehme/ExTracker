@@ -40,18 +40,7 @@ const Transaction = ({ expenses, onDelete }) => {
                 </div>
             ) : (
                 expenses.map((exp, idx) => (
-                    <div key={idx} style={{
-                        backgroundColor: "white",
-                        borderRadius: "10px",
-                        padding: "10px 15px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        marginBottom: "10px",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                        width: "500px",
-                        color: "black"
-                    }}>
+                    <div key={idx} className="transaction-card">
                         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <div style={{
                                 width: "32px",
@@ -123,7 +112,7 @@ const Expense = ({ expenses }) => {
 
     return (
         <div className="mob">
-            <h2 style={{ color: "black", marginBottom: "20px", padding: "10px" }}>Category Breakdown</h2>
+            <h2 style={{ color: "black", padding: "5px",marginBottom:"0" }}>Category Breakdown</h2>
             <div className="category-bars">
                 {Object.keys(totals).map((category) => {
                     const width = overallTotal ? (totals[category] / overallTotal) * 100 : 0;
