@@ -138,7 +138,7 @@ const Expense = ({ expenses }) => {
 export default function Etrac() {
     const [wallet, setWallet] = useState(() => {
         const stored = localStorage.getItem("wallet");
-        return stored ? parseFloat(stored) : 0;
+        return stored ? parseFloat(stored) : 5000;
     });
 
     const [expenses, setExpenses] = useState(() => {
