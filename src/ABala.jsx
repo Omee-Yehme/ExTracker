@@ -12,8 +12,8 @@ export default function ABala({ onCancel, onAddIncome }) {
         }
 
         onAddIncome(amount);
-        onCancel(); // close modal
-        setIncome(""); // optional if modal closes
+        onCancel(); 
+        setIncome(""); 
     };
 
     return (
@@ -31,9 +31,7 @@ export default function ABala({ onCancel, onAddIncome }) {
                         value={income}
                         onChange={(e) => setIncome(e.target.value)}
                     />
-                    <button className="bt11" type="submit" onClick={handleAddBalance}>
-                        Add Balance
-                    </button>
+                    <button className="bt11" type="submit" onClick={handleAddBalance}>Add Balance</button>
                     <button className="bt22" onClick={onCancel}>
                         Cancel
                     </button>

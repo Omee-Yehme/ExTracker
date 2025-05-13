@@ -112,7 +112,7 @@ const Expense = ({ expenses }) => {
 
     return (
         <div className="mob">
-            <h2 style={{ color: "black", padding: "5px",marginBottom:"0",textAlign:"center" }}>Category Breakdown</h2>
+            <h2 style={{ color: "black", padding: "5px", marginBottom: "0", textAlign: "center" }}>Category Breakdown</h2>
             <div className="category-bars">
                 {Object.keys(totals).map((category) => {
                     const width = overallTotal ? (totals[category] / overallTotal) * 100 : 0;
@@ -168,9 +168,10 @@ export default function Etrac() {
     };
 
     const addIncome = (amount) => {
-        setWallet(wallet + amount);
+        setWallet(prevWallet => prevWallet + amount);
         setShowBalanceForm(false);
     };
+
 
     return (
         <div>
@@ -178,12 +179,8 @@ export default function Etrac() {
             <div className="app">
                 <div className="app2">
                     <div className="div1">
-                        <h2>Wallet Balance: ₹{wallet}</h2>
-                        <button
-                            type="button"
-                            className="bt1"
-                            onClick={() => setShowBalanceForm(true)}
-                        >
+                        <h2>Wallet Balance: ₹{wallet.toFixed(2)}</h2>
+                        <button type="button" className="bt1" onClick={() => setShowBalanceForm(true)}>
                             + Add Income
                         </button>
                     </div>
